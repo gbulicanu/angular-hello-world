@@ -16,9 +16,7 @@ export class CoursesComponent {
   title = 'List of courses';
   courses = ['course1', 'course2', 'course3'];
 
-  constructor() {
-    const service = new CoursesService();
-
+  constructor(service: CoursesService) {
     this.courses = service.getCourses();
   }
 }
