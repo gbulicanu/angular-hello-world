@@ -13,10 +13,11 @@ import { CoursesService } from './courses.service';
   `
 })
 export class CoursesComponent {
-  title = 'List of courses';
-  courses = ['course1', 'course2', 'course3'];
+  title = '';
+  courses = [];
 
   constructor(service: CoursesService) {
     this.courses = service.getCourses();
+    this.title = `${this.courses.length} Courses`;
   }
 }
