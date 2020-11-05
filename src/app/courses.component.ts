@@ -4,18 +4,21 @@ import { CoursesService } from './courses.service';
 @Component({
   selector: 'app-courses',
   template: `
-    <img [src]="imageUrl" />
-      <table>
-        <tr>
-          <td [attr.colspan]="colSpan"></td>
-        </tr>
-      </table>
-    <h2>{{ title }}</h2>
-    <ul>
-      <li *ngFor="let course of courses">
-        {{course}}
-      </li>
-    </ul>
+    <div class="container">
+      <img [src]="imageUrl" />
+        <table>
+          <tr>
+            <td [attr.colspan]="colSpan"></td>
+          </tr>
+        </table>
+      <h2>{{ title }}</h2>
+      <ul>
+        <li *ngFor="let course of courses">
+          {{course}}
+        </li>
+      </ul>
+      <button class="btn btn-primary">Save</button>
+    </div>
   `
 })
 export class CoursesComponent {
