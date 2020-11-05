@@ -26,7 +26,7 @@ export class CoursesComponent {
   imageUrl = 'http://lorempixel.com/400/200';
   courses = [];
   colSpan = 2;
-  isActive = true;
+  isActive = false;
 
   constructor(service: CoursesService) {
     this.courses = service.getCourses();
