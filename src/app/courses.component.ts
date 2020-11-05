@@ -36,6 +36,7 @@ export class CoursesComponent {
     this.courses = service.getCourses();
     this.title = `${this.courses.length} Courses`;
   }
+
   onDivClick() {
     console.log('Div was clicked.');
   }
