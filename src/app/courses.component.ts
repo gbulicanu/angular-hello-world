@@ -19,7 +19,7 @@ import { CoursesService } from './courses.service';
       </ul>
       <button class="btn btn-primary"
         [class.active]="isActive"
-        (click)="onClick()">Save</button>
+        (click)="onClick($event)">Save</button>
     </div>
   `
 })
@@ -35,7 +35,7 @@ export class CoursesComponent {
     this.title = `${this.courses.length} Courses`;
   }
 
-  onClick() {
-    console.log('Save was clicked.')
+  onClick($event) {
+    console.log('Save was clicked.', $event);
   }
 }
