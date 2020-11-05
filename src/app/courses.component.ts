@@ -17,7 +17,9 @@ import { CoursesService } from './courses.service';
           {{course}}
         </li>
       </ul>
-      <button class="btn btn-primary" [class.active]="isActive">Save</button>
+      <button class="btn btn-primary"
+        [class.active]="isActive"
+        (click)="onClick()">Save</button>
     </div>
   `
 })
@@ -26,10 +28,14 @@ export class CoursesComponent {
   imageUrl = 'http://lorempixel.com/400/200';
   courses = [];
   colSpan = 2;
-  isActive = true;
+  isActive = false;
 
   constructor(service: CoursesService) {
     this.courses = service.getCourses();
     this.title = `${this.courses.length} Courses`;
+  }
+
+  onClick() {
+    console.log('Save was clicked.')
   }
 }
