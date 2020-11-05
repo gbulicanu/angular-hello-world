@@ -7,7 +7,7 @@ import { CoursesService } from './courses.service';
     <img [src]="imageUrl" />
       <table>
         <tr>
-          <td [colspan]="colSpan"></td>
+          <td [attr.colspan]="colSpan"></td>
         </tr>
       </table>
     <h2>{{ title }}</h2>
