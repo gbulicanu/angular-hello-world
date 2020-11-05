@@ -17,9 +17,11 @@ import { CoursesService } from './courses.service';
           {{course}}
         </li>
       </ul>
-      <button class="btn btn-primary"
-        [class.active]="isActive"
-        (click)="onClick($event)">Save</button>
+      <div (click)="onDivClick()">
+        <button class="btn btn-primary"
+          [class.active]="isActive"
+          (click)="onClick($event)">Save</button>
+      </div>
     </div>
   `
 })
@@ -33,6 +35,9 @@ export class CoursesComponent {
   constructor(service: CoursesService) {
     this.courses = service.getCourses();
     this.title = `${this.courses.length} Courses`;
+  }
+  onDivClick() {
+    console.log('Div was clicked.');
   }
 
   onClick($event) {
