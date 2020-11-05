@@ -41,6 +41,7 @@ export class CoursesComponent {
   }
 
   onClick($event) {
+    $event.stopPropagation();
     console.log('Save was clicked.', $event);
   }
 }
