@@ -11,7 +11,7 @@ import { CoursesService } from './courses.service';
             <td [attr.colspan]="colSpan"></td>
           </tr>
         </table>
-      <h2>{{ title }}</h2>
+      <h2 [style.backgroundColor]="isActive ? 'blue' : 'white'">{{ title }}</h2>
       <ul>
         <li *ngFor="let course of courses">
           {{course}}
@@ -26,7 +26,7 @@ export class CoursesComponent {
   imageUrl = 'http://lorempixel.com/400/200';
   courses = [];
   colSpan = 2;
-  isActive = false;
+  isActive = true;
 
   constructor(service: CoursesService) {
     this.courses = service.getCourses();
