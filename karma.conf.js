@@ -30,10 +30,16 @@ module.exports = function (config) {
     browsers: ["ChromeHeadlessNoSandbox"],
     customLaunchers: {
       ChromeHeadlessNoSandbox: {
-        base: 'ChromeHeadless',
-        flags: ['--no-sandbox','--headless','--disable-gpu','--disable-translate','--disable-extensions']
-      }
+        base: "ChromeHeadless",
+        flags: [
+          "--no-sandbox",
+          "--headless",
+          "--disable-gpu",
+          "--disable-translate",
+          "--disable-extensions",
+        ],
+      },
     },
-    singleRun: true,
+    singleRun: false,
   });
 };
