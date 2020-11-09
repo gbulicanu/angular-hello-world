@@ -22,7 +22,7 @@ import { CoursesService } from './courses.service';
           [class.active]="isActive"
           (click)="onClick($event)">Save</button>
       </div>
-      <input (keyup)="onKeyUp($event)" />
+      <input (keyup.enter)="onEnter()" />
     </div>
   `
 })
@@ -47,9 +47,7 @@ export class CoursesComponent {
     console.log('Save was clicked.', $event);
   }
 
-  onKeyUp($event) {
-    if ($event.keyCode === 13) {
-      console.log('Enter was pressed!')
-    }
+  onEnter() {
+    console.log('Enter was pressed!');
   }
 }
