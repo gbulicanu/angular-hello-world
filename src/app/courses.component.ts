@@ -22,6 +22,7 @@ import { CoursesService } from './courses.service';
           [class.active]="isActive"
           (click)="onClick($event)">Save</button>
       </div>
+      <input (keyup)="onKeyUp($event)" />
     </div>
   `
 })
@@ -44,5 +45,11 @@ export class CoursesComponent {
   onClick($event) {
     $event.stopPropagation();
     console.log('Save was clicked.', $event);
+  }
+
+  onKeyUp($event) {
+    if ($event.keyCode === 13) {
+      console.log('Enter was pressed!')
+    }
   }
 }
