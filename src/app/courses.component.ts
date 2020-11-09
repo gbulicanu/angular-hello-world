@@ -23,7 +23,7 @@ import { CoursesService } from './courses.service';
           (click)="onClick($event)">Save</button>
       </div>
       <br />
-      <input (keyup.enter)="onEnter()" />
+      <input (keyup.enter)="onEnter($event)" />
     </div>
   `
 })
@@ -48,7 +48,7 @@ export class CoursesComponent {
     console.log('Save was clicked.', $event);
   }
 
-  onEnter() {
-    console.log('Enter was pressed!');
+  onEnter($event) {
+    console.log($event.target.value);
   }
 }
