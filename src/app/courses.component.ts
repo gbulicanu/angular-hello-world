@@ -22,6 +22,7 @@ import { CoursesService } from './courses.service';
           [class.active]="isActive"
           (click)="onClick($event)">Save</button>
       </div>
+      <br />
       <input (keyup.enter)="onEnter()" />
     </div>
   `
