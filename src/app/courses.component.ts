@@ -23,7 +23,7 @@ import { CoursesService } from './courses.service';
           (click)="onClick($event)">Save</button>
       </div>
       <br />
-      <input [value]="email" (keyup.enter)="onEnter()" />
+      <input [value]="email" (keyup.enter)="email = $event.target.value; onEnter()" />
     </div>
   `
 })
