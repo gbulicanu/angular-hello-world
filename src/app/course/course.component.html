@@ -2,6 +2,6 @@
   {{ course.title | uppercase }} <br />
   {{ course.students | number }} <br />
   {{ course.rating | number:'1.1-1' }} <br />
-  {{ course.price }} <br />
+  {{ course.price | currency }} <br />
   {{ course.releaseDate }}
 </div>
