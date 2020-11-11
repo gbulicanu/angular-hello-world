@@ -23,7 +23,7 @@ import { CoursesService } from './courses.service';
           (click)="onClick($event)">Save</button>
       </div>
       <br />
-      <input #email (keyup.enter)="onEnter(email.value)" />
+      <input [value]="email" (keyup.enter)="onEnter()" />
     </div>
   `
 })
@@ -33,6 +33,7 @@ export class CoursesComponent {
   courses = [];
   colSpan = 2;
   isActive = false;
+  email = 'me@example.com';
 
   constructor(service: CoursesService) {
     this.courses = service.getCourses();
@@ -49,6 +50,6 @@ export class CoursesComponent {
   }
 
   onEnter(value) {
-    console.log(value);
+    console.log(this.email);
   }
 }
