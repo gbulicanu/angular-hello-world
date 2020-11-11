@@ -1,7 +1,7 @@
 <div class="container">
   {{ course.title | uppercase }} <br />
   {{ course.students | number }} <br />
-  {{ course.rating }} <br />
+  {{ course.rating | number:'1.2-2' }} <br />
   {{ course.price }} <br />
   {{ course.releaseDate }}
 </div>
