@@ -2,8 +2,10 @@ import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { CoursesComponent } from './courses.component';
 import { CoursesService } from './courses.service';
+import { MockCourse } from './courses.component.mocks';
+import { FormsModule } from '@angular/forms';
 
-describe('CourseComponent', () => {
+describe('CoursesComponent', () => {
   let component: CoursesComponent;
   let fixture: ComponentFixture<CoursesComponent>;
   let service: CoursesService;
@@ -11,6 +13,7 @@ describe('CourseComponent', () => {
   beforeEach(async(() => {
     TestBed.configureTestingModule({
       declarations: [ CoursesComponent ],
+      imports: [ FormsModule ],
       providers: [{
         provide: CoursesService, useClass: MockCourse
       }]
@@ -35,11 +38,4 @@ describe('CourseComponent', () => {
   }));
 });
 
-const COURSE_OBJECT_ONE = 'a';
-const COURSE_OBJECT_TWO = 'b';
 
-class MockCourse {
-  public getCourses() {
-    return [COURSE_OBJECT_ONE, COURSE_OBJECT_TWO];
-  }
-}
