@@ -24,6 +24,7 @@ import { CoursesService } from './courses.service';
       </div>
       <br />
       <input [(ngModel)]="email" (keyup.enter)="onEnter()" />
+      <br />
       {{ text | summary }}
     </div>
   `
@@ -35,6 +36,7 @@ export class CoursesComponent {
   colSpan = 2;
   isActive = false;
   email = 'me@example.com';
+  // tslint:disable-next-line:max-line-length
   text = 'Ut occaecat dolor ad enim est minim excepteur pariatur nostrud proident ex sunt velit aliqua. Voluptate incididunt nulla proident aliqua irure. Nostrud aliquip esse dolor esse. Labore cupidatat aliqua ad incididunt officia officia.';
 
   constructor(service: CoursesService) {
