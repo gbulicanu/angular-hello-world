@@ -53,7 +53,7 @@ export class CoursesComponent {
     console.log('Save was clicked.', $event);
   }
 
-  onEnter(value) {
+  onEnter() {
     console.log(this.email);
   }
 }
