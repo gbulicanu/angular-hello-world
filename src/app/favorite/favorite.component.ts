@@ -7,9 +7,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FavoriteComponent implements OnInit {
 
-  isFavorite = true;
+  isFavorite = false;
 
   constructor() { }
+
+  onClick($event) {
+    this.isFavorite = !this.isFavorite;
+  }
 
   ngOnInit() {
   }
