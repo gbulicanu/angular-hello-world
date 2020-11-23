@@ -1,0 +1,10 @@
+<span>
+  <svg class="bi text-success"
+    [class.star-fill]="isFaforite"
+    [class.star]="!isFaforite"
+    width="32"
+    height="32"
+    fill="currentColor">
+    <use xlink:href="/assets/bootstrap-icons.svg#star{{isFaforite ? "-fill" : ""}} "/>
+  </svg>
+</span>

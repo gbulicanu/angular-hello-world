@@ -5,6 +5,7 @@ import { CoursesService } from './courses.service';
 import { MockCourse } from './courses.component.mocks';
 import { FormsModule } from '@angular/forms';
 import { SummaryPipe } from './summary.pipe';
+import { FavoriteComponent } from './favorite/favorite.component';
 
 describe('CoursesComponent', () => {
   let component: CoursesComponent;
@@ -13,7 +14,7 @@ describe('CoursesComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ CoursesComponent, SummaryPipe ],
+      declarations: [ CoursesComponent, SummaryPipe, FavoriteComponent ],
       imports: [ FormsModule ],
       providers: [{
         provide: CoursesService, useClass: MockCourse
