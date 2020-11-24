@@ -1,14 +1,14 @@
 import { AppPage } from './app.po';
 
-describe('hello-world App', () => {
+describe('Angular HelloWorld App', () => {
   let page: AppPage;
 
   beforeEach(() => {
     page = new AppPage();
   });
 
-  it('should display welcome message', () => {
+  it('should display app title', () => {
     page.navigateTo();
-    expect(page.getParagraphText()).toEqual('Welcome to hello-world!');
+    expect(page.getParagraphText()).toEqual('Angular');
   });
 });
