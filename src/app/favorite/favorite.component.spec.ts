@@ -22,4 +22,26 @@ describe('FavoriteComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
+
+
+  it('should be un-selected by default', async(() => {
+    const compiled = fixture.debugElement.nativeElement;
+    expect(component.isFavorite).toBe(false);
+    expect(compiled.querySelector('.bi-star-fill')).toBeNull();
+  }));
+
+  it('should be selected after click', async(() => {
+    const compiled = fixture.debugElement.nativeElement;
+    component.onClick({});
+    expect(component.isFavorite).toBe(true);
+    expect(compiled.querySelector('.bi-star-fill')).toBeDefined();
+  }));
+
+  it('should be un-selected after 2 clicks', async(() => {
+    const compiled = fixture.debugElement.nativeElement;
+    component.onClick({});
+    component.onClick({});
+    expect(component.isFavorite).toBe(false);
+    expect(compiled.querySelector('.bi-star-fill')).toBeNull();
+  }));
 });
