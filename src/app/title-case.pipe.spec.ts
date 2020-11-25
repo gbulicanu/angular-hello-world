@@ -8,7 +8,7 @@ describe('TitleCasePipe', () => {
 
   it('should transform to title case without preposition', () => {
     const pipe = new TitleCasePipe();
-    var result = pipe.transform('strong argue');
+    const result = pipe.transform('strong argue');
     expect(result).toBe('Strong Argue');
   });
 });
