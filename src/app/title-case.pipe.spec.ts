@@ -29,4 +29,10 @@ describe('TitleCasePipe', () => {
     const result = pipe.transform('the strong of argue');
     expect(result).toBe('The Strong of Argue');
   });
+
+  it('should transform to title case with mix casing', () => {
+    const pipe = new TitleCasePipe();
+    const result = pipe.transform('THE STrOng oF arGue');
+    expect(result).toBe('The Strong of Argue');
+  });
 });
