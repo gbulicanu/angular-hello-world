@@ -35,4 +35,16 @@ describe('TitleCasePipe', () => {
     const result = pipe.transform('THE STrOng oF arGue');
     expect(result).toBe('The Strong of Argue');
   });
+
+  it('should transform to title case with significant white-space', () => {
+    const pipe = new TitleCasePipe();
+    const result = pipe.transform('strong  argue');
+    expect(result).toBe('Strong Argue');
+  });
+
+  it('should transform to title case with trim-able white-space', () => {
+    const pipe = new TitleCasePipe();
+    const result = pipe.transform(' strong argue ');
+    expect(result).toBe('Strong Argue');
+  });
 });
