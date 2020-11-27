@@ -10,9 +10,18 @@ export class TitleCasePipe implements PipeTransform {
       return '';
     }
 
+    const prepositions = [
+      'the',
+      'of'
+    ];
+
     const words = value.split(' ');
     for (let i = 0; i < words.length; i++) {
-      words[i] = words[i].substr(0, 1).toUpperCase() + words[i].substr(1);
+      if (!prepositions.includes(words[i].toLowerCase()) || i == 0){
+        words[i] = words[i].substr(0, 1).toUpperCase() + words[i].substr(1);
+      } else {
+        words[i] = words[i].substr(0, 1).toLowerCase() + words[i].substr(1);
+      }
     }
 
     return words.join(' ');

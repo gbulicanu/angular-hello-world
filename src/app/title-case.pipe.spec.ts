@@ -23,4 +23,10 @@ describe('TitleCasePipe', () => {
     const result = pipe.transform('strong argue');
     expect(result).toBe('Strong Argue');
   });
+
+  it('should transform to title case with preposition', () => {
+    const pipe = new TitleCasePipe();
+    const result = pipe.transform('the strong of argue');
+    expect(result).toBe('The Strong of Argue');
+  });
 });
