@@ -15,10 +15,11 @@ export class TitleCasePipe implements PipeTransform {
       .filter(x => x !== '');
 
     for (let i = 0; i < words.length; i++) {
-      if (i > 0 && this.isPreposition(words[i])) {
-        words[i] = words[i].toLowerCase();
+      const word = words[i];
+      if (i > 0 && this.isPreposition(word)) {
+        words[i] = word.toLowerCase();
       } else {
-        words[i] = this.toTitleCase(words[i]);
+        words[i] = this.toTitleCase(word);
       }
     }
 
