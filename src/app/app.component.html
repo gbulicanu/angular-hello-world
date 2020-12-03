@@ -1,2 +1,3 @@
 <h1>Angular</h1>
-<app-favorite [is-favorite]="post.isFavorite"></app-favorite>
+<app-favorite [is-favorite]="post.isFavorite" (change)="onFavoriteChange()">
+</app-favorite>
