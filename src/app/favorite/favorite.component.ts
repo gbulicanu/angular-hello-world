@@ -3,11 +3,12 @@ import { Component, Input, OnInit } from '@angular/core';
 @Component({
   selector: 'app-favorite',
   templateUrl: './favorite.component.html',
-  styleUrls: ['./favorite.component.css']
+  styleUrls: ['./favorite.component.css'],
+  inputs: ['isFavorite']
 })
 export class FavoriteComponent implements OnInit {
 
-  @Input() isFavorite = false;
+  isFavorite = false;
 
   constructor() { }
 
